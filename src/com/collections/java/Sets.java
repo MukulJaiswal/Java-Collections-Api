@@ -1,6 +1,7 @@
 package com.collections.java;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -45,6 +46,27 @@ public class Sets {
 		for (Integer i : set1) {
 			System.out.println(i);
 		}
+		
+		/**
+		 * It prints the values in the order in which it is present.
+		 */
+		Set<Integer> set2 = new LinkedHashSet();
+		
+		//Use of LinkedHashSet in programs.
+		String string = "Java123";
+
+		char[] chars = string.toCharArray();
+		Set<Character> charSet = new LinkedHashSet<Character>();
+		for (char c : chars) {
+		    charSet.add(c);
+		}
+
+		StringBuilder sb = new StringBuilder();
+		for (Character character : charSet) {
+		    sb.append(character);
+		}
+		System.out.println(sb.toString());
+		
 
 	}
 

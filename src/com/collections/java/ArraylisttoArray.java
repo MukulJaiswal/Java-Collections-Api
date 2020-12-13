@@ -17,7 +17,7 @@ public class ArraylisttoArray {
 		for (int i = 0; i < al.size(); i++)
 			arr[i] = al.get(i);
 
-		for (Integer x : arr)
+		for (int x : arr)
 			System.out.println(x + " ");
 
 		System.out.println("Second Method");
