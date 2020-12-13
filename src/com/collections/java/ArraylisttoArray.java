@@ -13,7 +13,7 @@ public class ArraylisttoArray {
 
 		Integer[] arr = new Integer[al.size()];
 
-		// ArrayList to Array Conversion
+		// ArrayList to Array Conversion.
 		for (int i = 0; i < al.size(); i++)
 			arr[i] = al.get(i);
 
