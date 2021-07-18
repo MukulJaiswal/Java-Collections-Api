@@ -7,6 +7,8 @@ public class LinklistvsArraylist {
 		 * Linked list is Doubly linked list implementation.
 		 * Insertion a node in between is efficient and easy.
 		 * Fast.
+		 * 
+		 * ArrayList is not synchronized but CopyOnWriteArrayList is Synchronized.
 		 */
 		
 		/**

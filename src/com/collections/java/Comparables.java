@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Comparator is used to sort an Object based on only one variable of an Object as in
+ * compareTo(Laptop laps), we pass only one object
+ * 
+ * @author Mukul
+ *
+ */
 class Laptop implements Comparable<Laptop> {
 
 	private String brand;
@@ -90,5 +97,4 @@ public class Comparables {
 		}
 
 	}
-
 }
