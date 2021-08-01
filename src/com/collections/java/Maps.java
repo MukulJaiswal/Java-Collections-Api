@@ -2,11 +2,12 @@ package com.collections.java;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Maps {
 	public static void main(String[] args) {
@@ -58,6 +59,7 @@ public class Maps {
 //		list.sort( (e1,e2) -> e1.getKey().compareTo(e2.getKey()));
 //		list.sort( (e1,e2) -> e1.getValue() - (e2.getValue()));
 		
+		
 		System.out.println(list);
 		
 //		map.clear();
@@ -71,6 +73,21 @@ public class Maps {
 		
 		System.out.println(map_sorted);
 		
+		/******************Java 8 technique to sort the HashMap*******************************/
+		System.out.println("******************Java 8 technique to sort the HashMap**************************");
+		
+		Map<String, Integer> hmap = new HashMap<String, Integer>();
+
+		hmap.put("Mukul", 100);
+		hmap.put("Devesh", 99);
+		hmap.put("John", 90);
+		hmap.put("Andrew", 95);
+		
+		HashMap<String, Integer> sorted = hmap.entrySet().stream().sorted((i1,i2) -> i1.getValue() - i2.getValue())
+				.collect(Collectors.toMap(Map.Entry:: getKey, Map.Entry::getValue ,(e1,e2) -> e1, LinkedHashMap::new));
+		
+		System.out.println(sorted);	
+		
 	}
 }
 
@@ -78,7 +95,7 @@ public class Maps {
 //https://www.geeksforgeeks.org/differences-treemap-hashmap-linkedhashmap-java/
 //HashMap allows one null key and multiple null values.
 //HashTable and ConcurrentHashMap does not allows null key and values.
-//Treemap does not allow null values because uses comparator to sort the keys
+//Treemap does not allow null keys because uses comparator to sort the keys
 
 
 /**

@@ -20,7 +20,8 @@ class Child extends Super {
 	public static void main(String[] args) {
 		Super sup = new Child();// Child object is reference by the variable of type Super
 		Child child = new Child();// Child object is referenced by the variable of type Child
-		sup.foo();// It will call the method of Super.
+		
+		sup.foo();// It will call the method of Super.    --This is static so overriding is not possible.
 		child.foo();// It will call the method of Child.
 
 		sup.bar();// It will call the method of Child.

@@ -149,16 +149,22 @@ public class Comparators {
 			System.out.println(lap);
 		}
 		
+		System.out.println("***********************************");
 		Laptop laptopMap = new Laptop("Asus", 4, 40000);
 		HashMap<Laptop, String> hmap = new HashMap<Laptop, String>();
 		hmap.put(laptopMap, laptopMap.getBrand());
 		laptopMap.setBrand("XXX");
 		System.out.println(laptopMap);
-		System.out.println(hmap.get(laptopMap));//We are not able to get the data.
+		System.out.println(hmap);
+		System.out.println("Data :: " + hmap.get(laptopMap));//We are not able to get the data.
 		
 		//Sorting HashMap
 		List<Map.Entry<Laptop, String>> list = new ArrayList<Entry<Laptop, String>>(hmap.entrySet());
 		list.sort((e1,e2) -> e1.getValue().compareTo(e2.getValue()));
+		
+		for (Entry<Laptop, String> entry : list) {
+			//print the hashmap or store in another hashmap
+		}
 		
 		
 		
