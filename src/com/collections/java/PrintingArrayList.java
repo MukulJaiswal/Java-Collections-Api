@@ -9,6 +9,14 @@ import java.util.ListIterator;
 public class PrintingArrayList {
 	public static void main(String[] args) {
 
+		
+		//***************************Defining a list using values - Shortcut************
+		
+		List<Integer> list = Arrays.asList(10,20,30,40,50);
+		System.out.println(list);
+		
+		//******************************************************************************
+		
 		ArrayList<Integer> values = new ArrayList<Integer>();
 
 		values.add(100);
@@ -28,7 +36,7 @@ public class PrintingArrayList {
 			System.out.println(values.get(i));
 		}
 		
-		//*************************Iterator*****************************
+		//*************************************Iterator*****************************
 		
 		//Difference between Iterator and ListIterator
 		//https://www.geeksforgeeks.org/difference-between-an-iterator-and-listiterator-in-java/
@@ -53,7 +61,6 @@ public class PrintingArrayList {
 		values.clear();
 		
 		
-		
 		/**
 		 * ------------------Convert Array to ArrayList-------------------------
 		 * https://www.geeksforgeeks.org/conversion-of-array-to-arraylist-in-java/
@@ -65,8 +72,6 @@ public class PrintingArrayList {
 		list1.add("Good");
 		
 		System.out.println("List  :" + list1);
-			
-		
 
 		/**
 		 * Interview Questions

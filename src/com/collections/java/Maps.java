@@ -42,10 +42,13 @@ public class Maps {
 			System.out.println(entry.getKey() + " " + entry.getValue());
 		}
 		
+		//Using Map.forEach
+		map.forEach((k,v) -> System.out.print(k + "::" + v + " "));
+		
 		
 		//*******************Convert HashMap to List(Sorting purpose)*****************
 		
-		System.out.println("****************Convert Hashmap to list***************");
+		System.out.println("\n****************Convert Hashmap to list***************\n");
 		List<Map.Entry<String, Integer>> list = new LinkedList<Map.Entry<String, Integer>>(map.entrySet());
 		System.out.println(list);
 		

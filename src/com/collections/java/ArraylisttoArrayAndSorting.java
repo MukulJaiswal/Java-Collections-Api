@@ -3,6 +3,7 @@ package com.collections.java;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -109,6 +110,7 @@ public class ArraylisttoArrayAndSorting {
 		//Below will also work.
 //		Collections.sort(slist);
 //		Collections.reverse(slist);
+//		Collections.sort(slist ,Comparator.reverseOrder());
 		System.out.println("Ascending String list " + slist);
 		
 		slist.sort(Collections.reverseOrder());
@@ -174,6 +176,14 @@ public class ArraylisttoArrayAndSorting {
 		//This is used to remove an element from an array
 		al.remove(0);
 		System.out.println(al);
+		
+//**************************Sorting************************************************	
+		System.out.println("\n************************Sort an positive number only on array************************************");
+
+		Integer B[] =  {1,5,-2,-1,2,6,-4,2,9,8};
+		
+		Arrays.sort(B, Comparator.comparingInt(Math::abs));
+		System.out.println(Arrays.toString(B));
 		
 	}
 }
