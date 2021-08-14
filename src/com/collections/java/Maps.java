@@ -28,7 +28,10 @@ public class Maps {
 		map.put("Mukul", 92);
 
 		System.out.println(map);
-
+		
+		//*******************How to iterate the HashMap starts*****************		
+		
+		System.out.println("*******************How to iterate the HashMap starts****************");
 		// Used to store all keys in a set variable.
 		Set<String> set = map.keySet();
 
@@ -45,6 +48,16 @@ public class Maps {
 		//Using Map.forEach
 		map.forEach((k,v) -> System.out.print(k + "::" + v + " "));
 		
+		//Using map.values to print the data
+		System.out.println("\nUsing map.values()");
+		for(Integer value : map.values()) {
+			System.out.println(value);
+		}
+		
+		System.out.println("*******************How to iterate the HashMap ends****************");
+
+		
+		//*******************How to iterate the HashMap ends*****************	
 		
 		//*******************Convert HashMap to List(Sorting purpose)*****************
 		
