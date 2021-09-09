@@ -14,8 +14,9 @@ public class EnumImpl {
 		
 		System.out.println("Winter : " + Season.WINTER.getValue());
 		
-		System.out.println(Arrays.toString(season1.values()));// return the array of season
-	
-	
+		System.out.println(Arrays.toString(Season.values()));// return the array of season
+		
+		//Enum can be directly accessed without instantiating it. Just like static keyword
+		System.out.println(Season.WINTER);
 	}
 }

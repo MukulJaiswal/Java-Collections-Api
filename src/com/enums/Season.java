@@ -1,5 +1,10 @@
 package com.enums;
 
+/**
+ * 
+ * @author Mukul.Jaiswal
+ *
+ */
 public enum Season {
 	/**
 	 * This is not the good practice to declare the enum as this need to be stored
