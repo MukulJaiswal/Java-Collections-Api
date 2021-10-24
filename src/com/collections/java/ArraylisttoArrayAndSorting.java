@@ -52,7 +52,7 @@ public class ArraylisttoArrayAndSorting {
 		al.add(30);
 		al.add(40);
 
-		Integer[] arr = new Integer[al.size()];
+		int[] arr = new int[al.size()];
 
 //*********************** ArrayList to Array Conversion.*****************
 		

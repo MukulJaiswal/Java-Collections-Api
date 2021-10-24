@@ -1,5 +1,6 @@
 package com.collections.java;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -62,14 +63,14 @@ public class Maps {
 		//*******************Convert HashMap to List(Sorting purpose)*****************
 		
 		System.out.println("\n****************Convert Hashmap to list***************\n");
-		List<Map.Entry<String, Integer>> list = new LinkedList<Map.Entry<String, Integer>>(map.entrySet());
+		List<Map.Entry<String, Integer>> list = new ArrayList<Map.Entry<String, Integer>>(map.entrySet());
 		System.out.println(list);
 		
 		//*******************Sort the HashMap based on keys and Values*****************
 		
 		System.out.println("\n*******Sort the HashMap based on Keys and Values ");
 //		Collections.sort(list, (e1,e2) -> e1.getKey().compareTo(e2.getKey()));//Sort based on key
-		Collections.sort(list, (e1,e2) -> e1.getValue() - (e2.getValue()));//sort based on values
+		Collections.sort(list, (e1,e2) -> e2.getValue() - (e1.getValue()));//sort based on values.e2 first means decending order
 		
 		//Below will also work
 //		list.sort( (e1,e2) -> e1.getKey().compareTo(e2.getKey()));
