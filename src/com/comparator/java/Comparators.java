@@ -125,31 +125,33 @@ public class Comparators {
 		RamSorter RamSorter = new RamSorter();
 		BrandSorter BrandSorter = new BrandSorter();
 
+		//Using inner class logic for comparator
+		System.out.println( "************Using inner class logic for comparator*************");
 		Collections.sort(laps, comparator);
-
-		Collections.sort(laps1, BrandSorter.thenComparing(RamSorter));
-
-		laps1.sort((a, b) -> a.getPrice() - b.getPrice());
-		
-		laps2.sort(Comparator.comparing(Laptop::getBrand).thenComparing(Laptop::getRam));
-		
 		for (Laptop lap : laps) {
 			System.out.println(lap);
 		}
 		
-		System.out.println("--------------------------");
+		System.out.println( "************Using Separate class logic for comparator*************");
+		Collections.sort(laps1, BrandSorter.thenComparing(RamSorter));
+		for (Laptop lap : laps1) {
+			System.out.println(lap);
+		}
 
+		System.out.println( "************Using inbuild list.sort() method*************");
+		laps1.sort((a, b) -> a.getPrice() - b.getPrice());
 		for (Laptop lap : laps1) {
 			System.out.println(lap);
 		}
 		
-		System.out.println("--------------------------");
-
+		System.out.println( "************Using inbuild list.sort() method with two comparison*************");
+		laps2.sort(Comparator.comparing(Laptop::getRam).thenComparing(Laptop::getBrand));
+//		laps2.sort(Comparator.comparing(Laptop::getRam).reversed().thenComparing(Laptop::getBrand));
 		for (Laptop lap : laps2) {
 			System.out.println(lap);
 		}
 		
-		System.out.println("***********************************");
+		System.out.println("\n***********************************\n");
 		Laptop laptopMap = new Laptop("Asus", 4, 40000);
 		HashMap<Laptop, String> hmap = new HashMap<Laptop, String>();
 		hmap.put(laptopMap, laptopMap.getBrand());

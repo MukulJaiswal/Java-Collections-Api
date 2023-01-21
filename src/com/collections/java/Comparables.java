@@ -5,8 +5,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Comparator is used to sort an Object based on only one variable of an Object as in
- * compareTo(Laptop laps), we pass only one object
+ * Comparable is used to sort an Object based on only one variable of an Object
+ * as in compareTo(Laptop laps), we pass only one object
  * 
  * @author Mukul
  *
@@ -98,3 +98,20 @@ public class Comparables {
 
 	}
 }
+
+/**
+ * Learning Trick
+ * 
+ * 
+ * The first difference lies in the letters 'b' of Compara-ble and 't' of
+ * Compara-tor. (all the letters are similar before)
+ * 
+ * 'b' < 't' so Compara-ble interface has the function which takes 1 parameter.
+ * Hence it is compareTo(b).
+ * 
+ * 't' > 'b' , so Compara-tor interface will have more parameters than
+ * Compara-ble , hence it takes 2. compare(a , b).
+ */
+
+
+

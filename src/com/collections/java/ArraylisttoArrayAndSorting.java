@@ -74,6 +74,12 @@ public class ArraylisttoArrayAndSorting {
 			System.out.println(a[i]);
 		}
 		
+		//Java 8 method to convert int array to list of integerss
+		System.out.println("***********List of Integers******************");
+		int[] ints = {1,2,3};
+		List<Integer> listOfInts = Arrays.stream(ints).boxed().collect(Collectors.toList());
+		System.out.println(listOfInts);
+		
 		//*********************************************************************************************************
 		
 		System.out.println("*************Array to ArrayList and Sorting of Object class **************");
@@ -106,6 +112,7 @@ public class ArraylisttoArrayAndSorting {
 		slist.add("Meena");
 		
 		slist.sort(null);
+//		slist.sort(Collections.reverseOrder());
 		
 		//Below will also work.
 //		Collections.sort(slist);

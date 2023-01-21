@@ -100,7 +100,10 @@ public class Maps {
 		hmap.put("John", 90);
 		hmap.put("Andrew", 95);
 		
-		HashMap<String, Integer> sorted = hmap.entrySet().stream().sorted((i1,i2) -> i1.getValue() - i2.getValue())
+		HashMap<String, Integer> sorted = hmap
+				.entrySet()
+				.stream()
+				.sorted((i1,i2) -> i1.getValue() - i2.getValue())
 				.collect(Collectors.toMap(Map.Entry:: getKey, Map.Entry::getValue ,(e1,e2) -> e1, LinkedHashMap::new));
 		
 		System.out.println(sorted);	
